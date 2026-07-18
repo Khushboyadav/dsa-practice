@@ -2,7 +2,7 @@
 public class EvenNumOfDigit {
     public static void main(String args[])
     {
-        int arr[]={21,34,789,378,1928,1};
+        int arr[]={21,34,789,378,1928,0};
         System.out.println(Digits(arr));
     }
 
@@ -12,7 +12,8 @@ public class EvenNumOfDigit {
         int count=0;
         for(int i=0; i<arr.length; i++)
         {
-            if(even(arr[i]))
+            //if(even(arr[i]))
+            if(method2(arr[i])%2==0)
             {
                 count++;
             }
@@ -24,6 +25,10 @@ public class EvenNumOfDigit {
     static boolean even(int num)
     {
         int count=0;
+        if(num<0)
+            num=num* -1;
+        if(num==0)
+            return false;
         while(num>0)
         {
             count++;
@@ -33,5 +38,15 @@ public class EvenNumOfDigit {
             return true;
         else
             return false;
+    }
+
+
+    //Shortcut to find the number of digits
+    //System.out.println((int)Math.log10(num)+1);
+
+    //Method 2 to find number of digits
+    static int method2(int num)
+    {
+        return (int)Math.log10(num)+1;
     }
 }
