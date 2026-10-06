@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class RemoveGivenElement {
     public static void main(String[] args) {
-        int[] num = { 3, 2, 1, 5, 6 };
+        int[] num = { 3, 2, 1, 5, 2, 6 ,2};
         int target = 2;
 
         int j = 0; // position for non-target elements
