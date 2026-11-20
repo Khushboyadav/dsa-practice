@@ -1,6 +1,6 @@
 package ArrayList;
 import java.util.*;
-public class SeconfLargest {
+public class SecondLargest {
     public static void main(String[] args)
     {
         ArrayList<Integer> list= new ArrayList<>(Arrays.asList(11,42,3,14,5,60,7));
